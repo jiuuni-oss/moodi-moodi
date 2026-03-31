@@ -15,7 +15,8 @@
     <link rel="stylesheet" href="css/style.css">
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
-
+    <!-- AOS css -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 </head>
 
@@ -77,11 +78,11 @@
             <div id="section1">
                 <h2>About Us</h2>
                 <div class="contents_wrap">
-                    <div class="side_img">
+                    <div class="side_img" data-aos="flip-left" data-aos-delay="100">
                         <img src="images/3.about_us/img1.jpg" alt="아이들이 놀고 있는 모습">
                     </div>
 
-                    <div class="center_text">
+                    <div class="center_text" data-aos="flip-left" data-aos-delay="300">
                         <ul class="features">
                             <li>
                                 <img src="images/3.about_us/icon1.png" alt="하트아이콘">
@@ -109,7 +110,7 @@
                         </div>
                     </div>
 
-                    <div class="side_img">
+                    <div class="side_img" data-aos="flip-left" data-aos-delay="500">
                         <img src="images/3.about_us/img2.jpg" alt="웃고 있는 아이">
                     </div>
                 </div>
@@ -178,7 +179,7 @@
                             <h3 class="sub-title">Every day <br> with Moodiz</h3>
                             <div class="character-swiper">
                                 <div class="swiper mySwiper">
-                                    <div class="swiper-wrapper">
+                                    <div class="swiper-wrapper" data-aos="fade-up" data-aos-delay="100">
                                         <div class="swiper-slide char-item">
                                             <div class="char-circle bg-orange">
                                                 <img src="images/4.moodiz/hearty.png" alt="하티">
@@ -218,7 +219,7 @@
                 </div>
             </div>
             <div id="new_vanner">
-                <h1>new characters coming soon...</h1>
+                <h1><span class="typing"></span></h1>
             </div>
             <div id="section3">
                 <h2 class="title">Our Product</h2>
@@ -361,57 +362,161 @@
                     <p>Copyright 2026. moodimoodi All rights reserved</p>
                 </div>
             </div>
-
         </div>
+    </div>
 
 
 
-        <!-- 오픈소스 -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <!-- 제어코드 -->
-        <script src="js/script.js"></script>
-        <!-- Swiper JS -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <!-- 오픈소스 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- 제어코드 -->
+    <script src="js/script.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 
-        <!-- Initialize Swiper -->
-        <script>
-            var swiper = new Swiper(".mySwiper", {
-                slidesPerView: 4,
-                spaceBetween: 30,
-                loop: true,
-                centeredSlides: false,
-                autoplay: {
-                    delay: 2500,
-                    disableOnInteraction: false,
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            // 기본 설정 (모바일)
+            slidesPerView: 1, // 한 화면에 슬라이드 1개
+            spaceBetween: 10, // 슬라이드 간격 10px
+
+            // 반응형 분기점
+            breakpoints: {
+                // 640px 이상 (태블릿)
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
                 },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
+                // 1024px 이상 (데스크탑)
+                1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 0,
                 },
-                navigation: {
-                    nextEl: ".swiper-button-next",
-                    prevEl: ".swiper-button-prev",
-                },
-                // 기본 설정 (모바일)
-                slidesPerView: 1, // 한 화면에 슬라이드 1개
-                spaceBetween: 10, // 슬라이드 간격 10px
+            },
 
-                // 반응형 분기점
-                breakpoints: {
-                    // 640px 이상 (태블릿)
-                    640: {
-                        slidesPerView: 2,
-                        spaceBetween: 20,
-                    },
-                    // 1024px 이상 (데스크탑)
-                    1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 0,
-                    },
-                },
+        });</script>
 
+    <!-- AOS js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <script>
+        AOS.init({
+            duration: 800,
+            once: false,
+        });
+    </script>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed('.typing', {
+            strings: ['new characters coming soon...'], // 출력될 문구
+            typeSpeed: 50,      // 타이핑 속도 (숫자가 작을수록 빠름)
+            backSpeed: 50,       // 지워지는 속도
+            fadeOut: true,       // 서서히 사라지는 효과 (선택 사항)
+            smartBackspace: true,
+            cursorChar: '|',     // 커서 모양
+            loop: true,          // 무한 반복 여부
+            backDelay: 2000,     // 문구 완성 후 대기 시간 (2초 후 다시 시작)
+            startDelay: 500,     // 시작 전 대기 시간
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const title = document.querySelector('.main-title');
+            const text = title.innerText;
+            title.innerHTML = '';
+
+            // 글자 쪼개기 로직은 동일
+            [...text].forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char === ' ' ? '\u00A0' : char;
+                span.style.transitionDelay = `${index * 0.04}s`;
+
+                const pointText = "어떤 색";
+                if (pointText.includes(char)) {
+                    span.classList.add('point-red');
+                }
+                title.appendChild(span);
             });
-        </script>
+
+            // 핵심: 스크롤 감지 로직 변경
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // 화면에 들어오면 클래스 추가 (애니메이션 시작)
+                        title.classList.add('active');
+                    } else {
+                        // 화면에서 완전히 벗어나면 클래스 제거 (초기화)
+                        // 이 부분이 있어야 다시 내려올 때 또 실행됩니다.
+                        title.classList.remove('active');
+                    }
+                });
+            }, {
+                threshold: 0.1, // 제목이 10%만 보여도 바로 반응
+                rootMargin: '0px 0px -50px 0px' // 하단 여백을 살짝 줘서 더 자연스럽게 실행
+            });
+
+            observer.observe(title);
+        });
+    </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const wrapper = document.querySelector('.section4_wrap');
+    const iconTypes = ['♥', '★']; // 사용할 모양
+    const iconCount = 20; // 원하는 개수
+
+    for (let i = 0; i < iconCount; i++) {
+        const icon = document.createElement('div');
+        icon.className = 'bg-icon';
+        
+        // 하트와 별 중 랜덤 선택
+        icon.innerText = iconTypes[Math.floor(Math.random() * iconTypes.length)];
+        
+        // 크기 랜덤 (20px ~ 40px)
+        const size = Math.floor(Math.random() * 20) + 20;
+        icon.style.fontSize = `${size}px`;
+        
+        // 위치 랜덤 (0% ~ 90% 사이)
+        const posX = Math.floor(Math.random() * 95);
+        const posY = Math.floor(Math.random() * 90);
+        icon.style.left = `${posX}%`;
+        icon.style.top = `${posY}%`;
+        
+        // 애니메이션 속도와 지연 시간 랜덤 (다 따로 움직이게)
+        const duration = Math.random() * 3 + 3; // 3s ~ 6s
+        const delay = Math.random() * 5;
+        icon.style.animationDuration = `${duration}s`;
+        icon.style.animationDelay = `${delay}s`;
+
+        wrapper.appendChild(icon);
+    }
+    
+});
+    </script>
+
 
 </body>
 
