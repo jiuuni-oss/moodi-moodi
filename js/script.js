@@ -11,3 +11,10 @@ $(".close_mmenu").click(function(){
     });
 });
 
+$(".m_gnb li a").click(function(){
+    $(".mmenu").css({
+        'left': '100vw',
+        'transition': 'left 0.3s'
+    });
+});
+
