@@ -24,59 +24,66 @@
 
     <div id="wrap">
         <div id="header_wrap">
-            <div id="header">
-                <div class="header_top">
-                    <ul>
-                        <li><a href="#"><img src="images/1.header/search.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/1.header/user.svg" alt=""></a></li>
-                        <li><a href="#"><img src="images/1.header/bag.svg" alt=""></a></li>
-                    </ul>
-                </div>
-
-                <div class="nav_container">
-                    <nav id="nav">
-                        <ul class="pc_gnb">
-                            <li><a href="#">BRAND</a></li>
-                            <li><a href="#">GUIDE</a></li>
-                            <li class="logo_li">
-                                <a href="#"><img src="images/1.header/logo.svg" alt="logo"></a>
-                            </li>
-                            <li><a href="#">PRODUCT</a></li>
-                            <li><a href="#">COMMUNITY</a></li>
+            <div class="header_content">
+                <div id="header">
+                    <div class="header_top">
+                        <ul>
+                            <li><a href="#"><img src="images/1.header/search.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/1.header/user.svg" alt=""></a></li>
+                            <li><a href="#"><img src="images/1.header/bag.svg" alt=""></a></li>
                         </ul>
-                        <!-- 타블렛이하 사용 -->
-                        <div class="m_nav">
-                            <div class="open_mmenu">
-                                <!-- 햄버거버튼 -->
-                                <img src="images/1.header/hamburger.png" alt="hamberger_btn">
+                    </div>
+
+                    <div class="nav_container">
+                        <nav id="nav">
+                            <ul class="pc_gnb">
+                                <li><a href="index.html#section1">MOODI-MOODI</a></li>
+                                <li><a href="index.html#section3">PRODUCT</a></li>
+                                <li class="logo_li">
+                                    <a href="#"><img src="images/1.header/logo.svg" alt="logo"></a>
+                                </li>
+                                <li><a href="index.html#section2">GUIDE</a></li>
+                                <li><a href="index.html#section5">COMMUNITY</a></li>
+                            </ul>
+                            <!-- 타블렛이하 사용 -->
+                            <div class="m_nav">
+                                <div class="open_mmenu">
+                                    <!-- 햄버거버튼 -->
+                                    <img src="images/1.header/hamburger.png" alt="hamberger_btn">
+                                </div>
+                                <div class="mmenu">
+                                    <!-- js로 나오게될 부분 -->
+                                    <ul class="m_gnb">
+                                        <li><a href="index.html#section1">MOODI</a></li>
+                                        <li><a href="index.html#section3">PRODUCT</a></li>
+                                        <li><a href="index.html#section2">GUIDE</a></li>
+                                        <li><a href="index.html#section5">COMMUNITY</a></li>
+                                    </ul>
+                                    <p class="close_mmenu">X</p>
+                                </div>
                             </div>
-                            <div class="mmenu">
-                                <!-- js로 나오게될 부분 -->
-                                <ul class="m_gnb">
-                                    <li><a href="#">BRAND</a></li>
-                                    <li><a href="#">GUIDE</a></li>
-                                    <li><a href="#">PRODUCT</a></li>
-                                    <li><a href="#">COMMUNITY</a></li>
-                                </ul>
-                                <p class="close_mmenu">X</p>
-                            </div>
-                        </div>
-                    </nav>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class="visual_text">
-                <h3>아이의 무드를 이해하는</h3>
-                <h2>첫 번째 마음 도구, 무디무디</h2>
-                <p class="sub_txt">아이의 서툰 기분마저 사랑스러운 기록이 됩니다.</p>
-                <a href="#" class="btn_more">우리 아이 무드 찾기</a>
+                <div class="visual_text">
+                    <h3>아이의 무드를 이해하는</h3>
+                    <h2>첫 번째 마음 도구, 무디무디</h2>
+                    <p class="sub_txt">아이의 서툰 기분마저 사랑스러운 기록이 됩니다.</p>
+                    <a href="#" class="btn_more">우리 아이 무드 찾기</a>
+                </div>
             </div>
             <div class="logo">
                 <img src="images/2.visual/logo.png" alt="moodi-moodi logo">
             </div>
+            <div class="header_video">
+                <video autoplay="" loop="" muted="" playsinline="" preload="metadata">
+                    <source src="images/2.visual/banner.mp4" type="video/mp4">
+                </video>
+            </div>
         </div>
         <div id="container">
             <div id="section1">
-                <h2>Brand</h2>
+                <h2 class="title">Moodi-moodi</h2>
                 <div class="contents_wrap">
                     <div class="side_img" data-aos="flip-left" data-aos-delay="100">
                         <img src="images/3.about_us/img1.jpg" alt="아이들이 놀고 있는 모습">
@@ -222,7 +229,7 @@
                 <h1><span class="typing"></span></h1>
             </div>
             <div id="section3">
-                <h2 class="title">Product</h2>
+                <h2 class="title">Our Product</h2>
                 <div class="section3_wrap">
                     <div class="product_left">
                         <div class="product_card large">
@@ -306,7 +313,7 @@
                 </div>
             </div>
             <div id="section5">
-                <h3>Community</h3>
+                <h2 class="title">Community</h2>
                 <div id="flow">
                     <div class="flow_line line1">
                         <ul>
@@ -349,10 +356,10 @@
                         <nav class="footer_nav">
                             <ul>
                                 <li><a href="#">Home</a></li>
-                                <li><a href="#section1">Brand</a></li>
-                                <li><a href="#section2">Guide</a></li>
-                                <li><a href="#section3">Product</a></li>
-                                <li><a href="#section5">Community</a></li>
+                                <li><a href="#">Brand</a></li>
+                                <li><a href="#">Shop</a></li>
+                                <li><a href="#">Guide</a></li>
+                                <li><a href="#">Community</a></li>
                             </ul>
                         </nav>
                     </div>
@@ -484,37 +491,37 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", () => {
-    const wrapper = document.querySelector('.section4_wrap');
-    const iconTypes = ['♥', '★']; // 사용할 모양
-    const iconCount = 20; // 원하는 개수
+            const wrapper = document.querySelector('.section4_wrap');
+            const iconTypes = ['♥', '★']; // 사용할 모양
+            const iconCount = 20; // 원하는 개수
 
-    for (let i = 0; i < iconCount; i++) {
-        const icon = document.createElement('div');
-        icon.className = 'bg-icon';
-        
-        // 하트와 별 중 랜덤 선택
-        icon.innerText = iconTypes[Math.floor(Math.random() * iconTypes.length)];
-        
-        // 크기 랜덤 (20px ~ 40px)
-        const size = Math.floor(Math.random() * 20) + 20;
-        icon.style.fontSize = `${size}px`;
-        
-        // 위치 랜덤 (0% ~ 90% 사이)
-        const posX = Math.floor(Math.random() * 95);
-        const posY = Math.floor(Math.random() * 90);
-        icon.style.left = `${posX}%`;
-        icon.style.top = `${posY}%`;
-        
-        // 애니메이션 속도와 지연 시간 랜덤 (다 따로 움직이게)
-        const duration = Math.random() * 3 + 3; // 3s ~ 6s
-        const delay = Math.random() * 5;
-        icon.style.animationDuration = `${duration}s`;
-        icon.style.animationDelay = `${delay}s`;
+            for (let i = 0; i < iconCount; i++) {
+                const icon = document.createElement('div');
+                icon.className = 'bg-icon';
 
-        wrapper.appendChild(icon);
-    }
-    
-});
+                // 하트와 별 중 랜덤 선택
+                icon.innerText = iconTypes[Math.floor(Math.random() * iconTypes.length)];
+
+                // 크기 랜덤 (20px ~ 40px)
+                const size = Math.floor(Math.random() * 20) + 20;
+                icon.style.fontSize = `${size}px`;
+
+                // 위치 랜덤 (0% ~ 90% 사이)
+                const posX = Math.floor(Math.random() * 95);
+                const posY = Math.floor(Math.random() * 90);
+                icon.style.left = `${posX}%`;
+                icon.style.top = `${posY}%`;
+
+                // 애니메이션 속도와 지연 시간 랜덤 (다 따로 움직이게)
+                const duration = Math.random() * 3 + 3; // 3s ~ 6s
+                const delay = Math.random() * 5;
+                icon.style.animationDuration = `${duration}s`;
+                icon.style.animationDelay = `${delay}s`;
+
+                wrapper.appendChild(icon);
+            }
+
+        });
     </script>
 
 
